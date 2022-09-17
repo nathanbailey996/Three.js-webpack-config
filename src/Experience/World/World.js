@@ -15,10 +15,11 @@ export default class World{
         this.environment = new Environment()
 
         this.test = new THREE.Mesh(
-            new THREE.BoxGeometry(5,5,5), 
-            new THREE.MeshBasicMaterial({color:0xff0000})
+            new THREE.SphereGeometry(5,50,50), 
+            new THREE.MeshBasicMaterial({map:this.experience.loaders.items.earth})
         )
-        this.test.position.z = -10
+
+        this.test.position.z = -20
         this.experience.scene.add(this.test)
     }
 
